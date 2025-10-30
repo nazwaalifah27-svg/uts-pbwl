@@ -30,12 +30,16 @@
 
         <div class="col-md-6">
           <label class="form-label">Jenis Produk</label>
-          <input type="text" class="form-control" name="jenis" placeholder="Pilih Produk">
+          <select class="form-select" name="jenis">
+            @foreach($jenis_produk as $jenis)
+              <option value="{{ $jenis }}">{{ $jenis }}</option>
+            @endforeach
+          </select>
         </div>
 
         <div class="col-md-6">
           <label class="form-label">Harga</label>
-          <input type="text" class="form-control" name="harga" placeholder="Masukkan harga">
+          <input type="number" class="form-control" name="harga" placeholder="Masukkan harga">
         </div>
       </div>
 
